@@ -2,13 +2,13 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.LinkedList;
+import java.util.Stack;
 
 public class Lab5 {
 	public static void main(String args[]) {
-		
-		Exercise2();
-
-		Exercise3();
+		Exercise5212();
+		Exercise5223();
+		Exercise533();
 	}
 	
 	public static void PrintCollection(Collection<Data> c)
@@ -20,7 +20,7 @@ public class Lab5 {
 		}
 		System.out.println();
 	}
-	public static void Exercise2()	{
+	public static void Exercise5212()	{
 		System.out.println("Exercise 2:");
 		LinkedList<Data> array = new LinkedList<Data>();
 		Data fred = new Data("Fred",21);
@@ -33,7 +33,7 @@ public class Lab5 {
 		array.add(2,harry);
 		PrintCollection(array);
 	}
-	public static void Exercise3() {
+	public static void Exercise5223() {
 		System.out.println("\nExercise 3: part 1");
 		ArrayList<Data> arrayA = new ArrayList<Data>();
 		ArrayList<Data> arrayB = new ArrayList<Data>();
@@ -64,8 +64,16 @@ public class Lab5 {
 		System.out.println();	
 		PrintCollection(arrayD);
 		System.out.println();
-
-
-		
+	}
+	public static void Exercise533() {
+		System.out.println("\nExercise 3: Stacks");
+		Data fred = new Data("Fred",21);
+		Data jo = new Data("Jo",43);
+		Data zoe = new Data("Zoe",37);
+		Stack<Data> stack = new Stack<Data>();
+		stack.push(fred);
+		stack.push(jo);
+		stack.push(zoe);
+		PrintCollection(stack);
 	}
 }
