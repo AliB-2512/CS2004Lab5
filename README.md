@@ -8,3 +8,6 @@ Worksheet 5 for module CS2004 Algorithms and their appplications
 - [x] 5.3 Exercise 3
 - [x] 5.4 Exercise 4
 
+
+- [x] Final Push to GitHub :clap: :clap:
+
