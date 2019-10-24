@@ -75,5 +75,11 @@ public class Lab5 {
 		stack.push(jo);
 		stack.push(zoe);
 		PrintCollection(stack);
+		while(stack.isEmpty() == false)
+		{
+			stack.pop().Print(); //removes items from stack in reverse order as its a LIFO structure
+		}
+		System.out.println(stack.size());
+
 	}
 }
