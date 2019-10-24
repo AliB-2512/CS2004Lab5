@@ -101,8 +101,8 @@ public class Lab5 {
 		System.out.println("\nSize of Queue " + q.size()+ "\n");
 		for(int i=0;i<20;++i) //20 causes an error as the defined size of the queue is 10 (0-9) which is why we use less than and not <=
 		{
-			q.offer(new Data("Test:"+String.valueOf(i),i)); // using offer will not throw an illegalStateException but instead return false when in fails to add an element in a size restricted queue
-		}
+			q.offer(new Data("Test:"+String.valueOf(i),i)); // using offer will not throw an illegalStateException 
+		}													// but instead return false when in fails to add an element in a size restricted queue
 		PrintCollection(q);
 
 
