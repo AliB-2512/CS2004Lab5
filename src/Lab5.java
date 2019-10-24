@@ -3,12 +3,14 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Stack;
+import java.util.concurrent.ArrayBlockingQueue;
 
 public class Lab5 {
 	public static void main(String args[]) {
 		Exercise5212();
 		Exercise5223();
 		Exercise533();
+		Exercise544();
 	}
 	
 	public static void PrintCollection(Collection<Data> c)
@@ -79,7 +81,30 @@ public class Lab5 {
 		{
 			stack.pop().Print(); //removes items from stack in reverse order as its a LIFO structure
 		}
-		System.out.println(stack.size());
+		System.out.println("\nSize of Stack " + stack.size());
+
+	}
+	public static void Exercise544() {
+		System.out.println("\nExercise 4: Queues");
+		Data fred = new Data("Fred",21);
+		Data jo = new Data("Jo",43);
+		Data zoe = new Data("Zoe",37);
+		ArrayBlockingQueue<Data> q = new ArrayBlockingQueue<Data>(10);
+		q.add(fred);
+		q.add(jo);
+		q.add(zoe);
+		PrintCollection(q);
+		while(q.isEmpty() == false)
+		{
+			q.poll().Print();//removes items from queue in  order as its a FIFO structure
+		}	
+		System.out.println("\nSize of Queue " + q.size()+ "\n");
+		for(int i=0;i<20;++i) //20 causes an erro as the defined size of the queue is 10 (0-9) which is why we use less than and not <=
+		{
+			q.offer(new Data("Test:"+String.valueOf(i),i)); // using offer will not throw an illegalStateException but instead return false when in fails to add an element in a size restricted queue
+		}
+		PrintCollection(q);
+
 
 	}
 }
